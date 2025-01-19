@@ -13,6 +13,13 @@ public class Company {
         this.cif = cif;
         this.departments = departments;
     }
+public void showInfo(){
+    System.out.println("compañia "+name+", cif "+cif);
+    for (var departments:departments){
+        departments.showInfo();
+    }
+}
+
 
     public String getName() {
         return name;

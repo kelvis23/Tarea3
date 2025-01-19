@@ -13,6 +13,13 @@ public class Department {
         this.budget = budget;
         this.employee = employee;
     }
+    public void showInfo(){
+        System.out.println( "Departamento: "+name+", presuspuesto: "+budget);
+        for ( var employee : employee){
+            employee.showInfo();
+        }
+
+    }
 
     public String getName() {
         return name;

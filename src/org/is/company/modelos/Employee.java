@@ -8,11 +8,14 @@ public class Employee {
     private String lastname;
     private String position;
 
-    public Employee(String name, String nif, String position, String lastname) {
-        this.name = name;
+    public Employee( String nif,String name,  String lastname,String position) {
         this.nif = nif;
-        this.position = position;
+        this.name = name;
         this.lastname = lastname;
+        this.position = position;
+    }
+    public void  showInfo(){
+        System.out.println( "nif: "+nif+", nombre: "+name+", apellido: "+lastname+", puesto: "+position);
     }
 
     public String getNif() {

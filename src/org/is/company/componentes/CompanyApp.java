@@ -1,5 +1,7 @@
 package org.is.company.componentes;
 
+import org.is.company.modelos.Company;
+
 import java.util.Scanner;
 
 public class CompanyApp {
@@ -10,12 +12,12 @@ public class CompanyApp {
         this.scanner = scanner;
         this.companyReader = companyReader;
     }
-    public  void  run(){
+    public  void  run(Company company){
         int option;
         do {
             option = menu();
             if (option ==1){
-                System.out.println("323");
+               company.showInfo();
             } else if (option ==2) {
                 System.out.println("hola");
             } else if (option ==3) {
