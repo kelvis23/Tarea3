@@ -1,5 +1,6 @@
 package org.is.company;
 
+import org.is.company.componentes.CompanyReader;
 import org.is.company.componentes.DepartmentReader;
 import org.is.company.componentes.EmployeeReader;
 import org.is.company.modelos.Department;
@@ -13,6 +14,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         EmployeeReader employeeReader=new EmployeeReader(scanner);
         DepartmentReader departmentReader = new DepartmentReader(scanner, employeeReader);
+        CompanyReader companyReader =new CompanyReader(scanner,departmentReader);
         Department department = departmentReader.read();
     }
 }
