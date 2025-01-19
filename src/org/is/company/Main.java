@@ -1,8 +1,10 @@
 package org.is.company;
 
+import org.is.company.componentes.CompanyApp;
 import org.is.company.componentes.CompanyReader;
 import org.is.company.componentes.DepartmentReader;
 import org.is.company.componentes.EmployeeReader;
+import org.is.company.modelos.Company;
 import org.is.company.modelos.Department;
 
 import java.util.Scanner;
@@ -15,6 +17,8 @@ public class Main {
         EmployeeReader employeeReader=new EmployeeReader(scanner);
         DepartmentReader departmentReader = new DepartmentReader(scanner, employeeReader);
         CompanyReader companyReader =new CompanyReader(scanner,departmentReader);
-        Department department = departmentReader.read();
+        CompanyApp companyApp = new CompanyApp(scanner,companyReader);
+        Company company = companyReader.read();
+        companyApp.run();
     }
 }

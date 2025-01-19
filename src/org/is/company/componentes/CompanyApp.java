@@ -13,12 +13,7 @@ public class CompanyApp {
     public  void  run(){
         int option;
         do {
-            System.out.println("1.Dado un nombre de departamento, mostrar todos sus datos.");
-            System.out.println("2.Mostrar los empleados de un departamento dado el nombre del departamento");
-            System.out.println("3.Introduciendo un nombre de departamento y un nif, mostrar los datos del empleado del departamento");
-            System.out.println("4.Salir");
-            option = scanner.nextInt();
-            scanner.nextLine();
+            option = menu();
             if (option ==1){
                 System.out.println("323");
             } else if (option ==2) {
@@ -32,5 +27,16 @@ public class CompanyApp {
                 System.out.println("otcion inbalidad");
             }
         }while (option !=4);
+    }
+
+    private int menu() {
+        int option;
+        System.out.println("1.Dado un nombre de departamento, mostrar todos sus datos.");
+        System.out.println("2.Mostrar los empleados de un departamento dado el nombre del departamento");
+        System.out.println("3.Introduciendo un nombre de departamento y un nif, mostrar los datos del empleado del departamento");
+        System.out.println("4.Salir");
+        option = scanner.nextInt();
+        scanner.nextLine();
+        return option;
     }
 }
