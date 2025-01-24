@@ -12,7 +12,8 @@ public class CompanyApp {
         this.scanner = scanner;
         this.companyReader = companyReader;
     }
-    public  void  run(Company company){
+    public  void  run(){
+        Company company = companyReader.read();
         int option;
         do {
             option = menu();
